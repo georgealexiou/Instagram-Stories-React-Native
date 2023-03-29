@@ -33,13 +33,15 @@ export const HomeScreen: React.FC = () => {
           ))}
         </ScrollView>
       </View>
-      <View style={styles.generatedTextContainer}>
-        <Text style={styles.bold}>Generated users: </Text>
-        <Text style={styles.normal}>{users.length}</Text>
-      </View>
-      <View style={styles.generatedTextContainer}>
-        <Text style={styles.bold}>Generated stories: </Text>
-        <Text style={styles.normal}>{stories.length}</Text>
+      <View style={styles.buttonContainer}>
+        <View style={styles.generatedTextContainer}>
+          <Text style={styles.bold}>Generated users: </Text>
+          <Text style={styles.normal}>{users.length}</Text>
+        </View>
+        <View style={styles.generatedTextContainer}>
+          <Text style={styles.bold}>Generated stories: </Text>
+          <Text style={styles.normal}>{stories.length}</Text>
+        </View>
       </View>
       <View style={styles.buttonContainer}>
         <SmallButton

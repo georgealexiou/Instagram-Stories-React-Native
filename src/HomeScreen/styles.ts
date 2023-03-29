@@ -54,6 +54,6 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   scrollView: { paddingVertical: 20 },
-  generatedTextContainer: { paddingTop: 100, flexDirection: "row" },
+  generatedTextContainer: { flexDirection: "row" },
   buttonContainer: { paddingTop: 100, alignItems: "center" },
 });
