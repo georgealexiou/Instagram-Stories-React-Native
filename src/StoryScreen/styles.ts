@@ -1,0 +1,76 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: "black" },
+  textInput: { color: "white", width: "100%" },
+  image: {
+    width: "100%",
+    aspectRatio: 0.5625,
+    resizeMode: "cover",
+    alignSelf: "center",
+    borderRadius: 8,
+    zIndex: 1,
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    alignItems: "center",
+    paddingHorizontal: 15,
+  },
+  userName: {
+    fontSize: 16,
+    color: "#FFF",
+    fontWeight: "bold",
+    shadowColor: "black",
+    textShadowRadius: 4,
+  },
+  closeButton: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  closeButtonText: {
+    fontSize: 18,
+    color: "#FFF",
+  },
+  backButton: {
+    position: "absolute",
+    left: 20,
+    zIndex: 2,
+    aspectRatio: 0.28125,
+    height: "85%",
+    top: 110,
+  },
+  forwardButton: {
+    position: "absolute",
+    right: 20,
+    zIndex: 2,
+    aspectRatio: 0.28125,
+    height: "85%",
+    top: 110,
+  },
+  bottomTab: {
+    flexDirection: "row",
+    width: "95%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 10,
+    alignSelf: "center",
+  },
+  messageBox: {
+    borderRadius: 1000,
+    borderWidth: 1,
+    borderColor: "gray",
+    width: "80%",
+    padding: 10,
+  },
+  storyContainer: {
+    position: "absolute",
+    zIndex: 2,
+    justifyContent: "flex-start",
+    height: "100%",
+    width: "100%",
+    alignItems: "center",
+    paddingTop: 70,
+  },
+});

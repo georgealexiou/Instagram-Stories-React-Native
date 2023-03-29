@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { HomeScreen } from "./src/HomeScreen/HomeScreen";
+import { StoryScreen } from "./src/StoryScreen/StoryScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-export default function App() {
+export type RootStackParamList = {
+  Home: undefined;
+  Story: {
+    stories: Story[];
+    currentStoryIndex: number;
+  };
+};
+
+export type Story = {
+  id: number;
+  content: string;
+  user: string;
+  userId: number;
+};
+
+const RootStack = createStackNavigator<RootStackParamList>();
+
+const App: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <RootStack.Navigator initialRouteName="Home" headerMode="none">
+          <RootStack.Screen name="Home" component={HomeScreen} />
+          <RootStack.Screen name="Story" component={StoryScreen} />
+        </RootStack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
